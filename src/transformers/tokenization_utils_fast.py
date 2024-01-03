@@ -622,7 +622,7 @@ class PreTrainedTokenizerFast(PreTrainedTokenizerBase):
 
         if isinstance(token_ids, int):
             token_ids = [token_ids]
-        text = self._tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+        text = self._tokenizer.decode(token_ids[0][0], skip_special_tokens=skip_special_tokens)
 
         clean_up_tokenization_spaces = (
             clean_up_tokenization_spaces
